@@ -1,11 +1,17 @@
 source 'https://rubygems.org'
+ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 
-
-# Use SCSS for stylesheets
+# Style gems
 gem 'sass-rails', '~> 4.0.0'
+gem "haml", "~> 4.0.5"
+gem "compass", "~> 0.12.2"
+
+# For auth
+gem "devise", "~> 3.2.2"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
