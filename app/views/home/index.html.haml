@@ -1,5 +1,24 @@
 - if user_signed_in?
-  %h1 Home
-  = render 'markdown_form'
+  %h1.title
+    = "Welcome #{@user.name}"
+  .papers
+    = link_to "Create New Markdown Paper", "#"
+    - if @user.papers.count > 0
+      %table
+        %tr
+          %th Title
+          %th Created At
+          %th Edit
+          %th Destory
+        - @user.papers.each do |paper|
+          %tr
+            %td= paper.title
+            %td= paper.created_at.strftime('%d/%m/%Y %H:%M')
+            %td
+              = link_to "edit", "#"
+            %td
+              = link_to "destroy", "#"
+    - else
+      %p No Markdown papers have been created.
 - else
   %h1 Sign in to render Markdown
