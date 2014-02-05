@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+  embeds_many :papers
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
