@@ -8,7 +8,8 @@ gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 # Style gems
 gem 'sass-rails', '~> 4.0.0'
 gem "haml", "~> 4.0.5"
-gem "compass", "~> 0.12.2"
+gem "compass-rails", "~> 1.1.3"
+gem "compass-susy-plugin", "~> 0.9"
 
 # For auth
 gem "devise", "~> 3.2.2"
