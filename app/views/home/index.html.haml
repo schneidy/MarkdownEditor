@@ -1,1 +1,5 @@
-%h1 Home
+- if user_signed_in?
+  %h1 Home
+  = render 'markdown_form'
+- else
+  %h1 Sign in to render Markdown
