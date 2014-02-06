@@ -1,28 +1,23 @@
-== README
+How to use
+===
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Create a new user.
+2. Create a markdown paper
+3. Type in the markdown box
+4. Click "Render" to see how the page looks.
+5. Click "Save" to save the markdown or just click on the home button in the navigation bar to go back to your papers.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Uses
+===
+* [Tilt](https://github.com/rtomayko/tilt)
+* [Rdiscount](http://dafoster.net/projects/rdiscount/)
+* [Devise](https://github.com/plataformatec/devise)
+* [Mongoid](http://mongoid.org/en/mongoid/index.html)
+
+
+What To Add
+===
+* Styles using Compass and Susy
+* Admin account
+* Sharing of pages
