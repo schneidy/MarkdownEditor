@@ -2,7 +2,7 @@
   %h1.title
     = "Welcome #{@user.name}"
   .papers
-    = link_to "Create New Markdown Paper", "#"
+    = link_to "Create New Markdown Paper", new_paper_path
     - if @user.papers.count > 0
       %table
         %tr
@@ -15,9 +15,9 @@
             %td= paper.title
             %td= paper.created_at.strftime('%d/%m/%Y %H:%M')
             %td
-              = link_to "edit", "#"
+              = link_to "edit", edit_paper_path(paper)
             %td
-              = link_to "destroy", "#"
+              = link_to "destroy", paper, method: :delete, data: { confirm: 'Are you sure?' }
     - else
       %p No Markdown papers have been created.
 - else

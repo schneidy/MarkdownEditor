@@ -1,0 +1,21 @@
+= form_for @paper do |f|
+  - if @paper.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@paper.errors.count, "error")
+        prohibited this paper from being saved:
+      %ul
+        - @paper.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :title
+    %br
+    = f.text_field :title
+  .field
+    = f.label :markdown
+    %br
+    = f.text_area :markdown
+  .save
+    = f.submit "Save", name: "submit"
+  .render
+    = f.submit "Render", name: "submit"
